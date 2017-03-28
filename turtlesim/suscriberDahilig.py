@@ -2,7 +2,7 @@ import rospy
 from std_msgs.msg import String
 
 def callback(data):
-        count = count + 1
+        cnt = cnt + 1
         rospy.loginfo(count)
 
 def listener():
@@ -10,6 +10,6 @@ def listener():
         rospy.Subscriber("/move_comand", String, callback)
         rospy.spin();
 
-count = 0
+cnt = 0
 if __name__ == '__main__':
         listener()
